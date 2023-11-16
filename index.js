@@ -14,12 +14,6 @@ app.get('/api',async (req,res)=>{
   res.json(result);
 });
 
-app.post('/api',async(req,res)=>{
-  let result = await new Model(req.body);
-  result = await result.save();
-  res.json(result);
-})
-
 app.listen(PORT,()=>{
   console.log(`Server running at ${PORT}`)
 })
